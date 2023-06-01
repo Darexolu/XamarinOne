@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamlasXML.ListViewsTest">
+    <ContentPage.Content>
+        <!--<StackLayout x:Name="stack" BackgroundColor="Yellow">
+            <Label Text="Learning ListView" />
+            <Label Text="Things we have to sell" FontSize="Large" />
+            <ListView x:Name="stockList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Title}" FontSize="Large" TextColor="{Binding ImageUri}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView x:Name="hallo" SeparatorVisibility="None"/>
+        </StackLayout>-->
+        <StackLayout>
+            <ListView x:Name="secondOne" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding .}" FontSize="Large" Padding="8" BackgroundColor="{Binding .}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView x:Name="secondTwo" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding .}" TextColor="Black" FontAttributes="Bold" FontSize="Large" Padding="8" BackgroundColor="{Binding ImageUri}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

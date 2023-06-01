@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamlasXML.LifeCycleTest" BackgroundImageSource="imag.png"
+             xmlns:codebitEntry="clr-namespace:XamlasXML">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<Entry Placeholder="Enter text for label" TextChanged="Entry_TextChanged" x:Name="entryy"/>
+            <Label x:Name="label" Text="Welcome to Xamarin.Forms!" FontSize="38" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"  />-->
+            <codebitEntry:ContentViews AskMe="True" AskMeTest="Peter is asking too much"/>
+
+            <Editor Placeholder="Enter text for label" TextChanged="Editor_TextChanged" x:Name="editorr"/>
+
+            <codebitEntry:ContentViews AskMe="True" AskMeTest="Peter is asking too much"/>
+
+            <!--<Label x:Name="label2" Text="" FontSize="38" TextColor="Black"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"  />-->
+            <Label x:Name="loremipsum" HorizontalOptions="StartAndExpand" VerticalOptions="End" FontSize="Medium"  Text="" LineBreakMode="WordWrap" MaxLines="1">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer  Tapped="ONCLICK" NumberOfTapsRequired="1"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <codebitEntry:ContentViews/>
+
+            <StackLayout Orientation="Horizontal">
+                <codebitEntry:ContentViews Damilare="Male" Ebuka="WearingBlack"/>
+                <codebitEntry:ContentViews >
+                    <codebitEntry:ContentViews.Damilare>
+                        Male
+                    </codebitEntry:ContentViews.Damilare>
+                    <codebitEntry:ContentViews.Ebuka>
+                        WearingBlack
+                    </codebitEntry:ContentViews.Ebuka>
+                    </codebitEntry:ContentViews >
+                        <codebitEntry:ContentViews >
+                        <codebitEntry:ContentViews.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PeterDidTHis_Tapped" NumberOfTapsRequired="1"/>
+                    </codebitEntry:ContentViews.GestureRecognizers>
+                    </codebitEntry:ContentViews>
+            </StackLayout>
+
+        </StackLayout>
+        <!--<Button Text="Read More" Clicked="Button_Clicked"></Button>-->
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamlasXML.PageTask1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Online Book System" FontSize="50" HorizontalTextAlignment="Center" BackgroundColor="Aquamarine" TextColor="DarkBlue" />
+            <Grid ColumnDefinitions="*,*,*" HeightRequest="150">
+                <Frame Padding="0" Margin="0" CornerRadius="25">
+                    <Image Source="bookse.jfif" HorizontalOptions="Start" Aspect="Fill" />
+                </Frame>
+                <Image  Source="books.jfif" HorizontalOptions="FillAndExpand" Aspect="Fill" Grid.Column="1" Grid.ColumnSpan="2"/>
+            </Grid>
+            <Label Text="Available Books"  FontSize="30" TextColor="Black" TextDecorations="Underline" />
+            <Grid ColumnDefinitions="*,*,*"  HeightRequest="150">
+                <Frame Padding="0" Margin="0" CornerRadius="25">
+                    <Image  Source="book.jfif" HorizontalOptions="Start" Aspect="Fill"/>
+                </Frame>
+                <Image Source="bookse.jfif" HorizontalOptions="FillAndExpand" Aspect="Fill" Grid.Column="1" Grid.ColumnSpan="2"/>
+            </Grid>
+            <Grid ColumnDefinitions="*,*,*"  HeightRequest="150">
+                <Image  Source="bok.jfif" />
+                <Image Source="books.jfif" Aspect="Fill" Grid.Column="1"/>
+                <Image Source="book.jfif"  Aspect="Fill" Grid.Column="2"/>
+            </Grid>
+            <Label BackgroundColor="Aquamarine" TextColor="DarkBlue" HeightRequest="100" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="40">
+                ORDER FOR YOURS NOW!
+            </Label>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

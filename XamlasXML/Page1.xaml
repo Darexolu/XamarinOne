@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamlasXML.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="titleHeader" Text="Goal.com" FontSize="Header" TextColor="#A2930F"/>
+            <Label Text="Waiting to be clicked" TextColor="Red" x:Name="clickMeDisplay" FontSize="Medium"/>
+            <Button Text="Click me" Clicked="ClickMe_Clicked"/>
+            <Button Text="Click Event" TextColor="Red" Clicked="ClickMe2_Clicked"/>
+            <Button Text="Click Event" TextColor="Pink" Clicked="ClickMe2_Clicked"/>
+
+            <Switch Toggled="switch_Toggled"/>
+            <Editor x:Name="entry" TextChanged="label_TextChanged" AutoSize="TextChanges" SizeChanged="entry_SizeChanged" BackgroundColor="Yellow"/>
+           
+            <!--<StackLayout Orientation="Horizontal" BackgroundColor="Yellow" HeightRequest="150" Padding="5">
+                <Image HorizontalOptions="Center"  Source=""/>
+                <Image HorizontalOptions="Center" Source=""/>
+            </StackLayout>-->
+
+            <Label Text="Messi wins" FontSize="30" TextColor="#A2930F" x:Name="targetColor"/>
+            <Grid ColumnDefinitions="*,*,*" Padding="5" BackgroundColor="Pink" HeightRequest="500">
+                <Image BackgroundColor="LightPink" Source="image.png"/>
+                <Image BackgroundColor="LightPink" Source="imag.png" Grid.Column="1"/>
+                <Image BackgroundColor="LightPink" Source="premier.jpg" Grid.Column="2"/>
+
+            </Grid>
+            <!--<ScrollView Orientation="Vertical">
+                <Frame Padding="0" Margin="0" CornerRadius="25">
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="UWP,Android" Value="messi.jpg"/>
+                                <On Platform ="iOS" Value="imag.png"/>
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                </Frame>-->
+
+                <!--<Label>
+                <Label.TextColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <OnPlatform="iOS" Value="Green"/>
+                        <OnPlatform ="Android,UWP" Value="Yellow"/>
+                    </OnPlatform>
+                </Label.TextColor>
+            </Label>-->
+            <!--</ScrollView>-->
+
+            <Label>
+                <Label.BackgroundColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="iOS" Value="Green"/>
+                        <On Platform ="Android" Value="Yellow"/>
+                        <On Platform ="UWP" Value="Blue"/>
+                    </OnPlatform>
+                </Label.BackgroundColor>
+
+            <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <On Platform="iOS" Value="Red"/>
+                    <On Platform ="Android" Value="Blue"/>
+                    <On Platform ="Android" Value="Orange"/>
+                </OnPlatform>
+            </Label.TextColor>
+            
+            <Label.Text>
+                <OnPlatform x:TypeArguments="x:String">
+                <On Platform="iOS" Value="This is IOS"/>
+                <On Platform ="Android" Value="This is Android"/>
+                <On Platform ="Android" Value="This is UWP"/>
+                </OnPlatform>
+            </Label.Text>
+ 
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS" Value="50"/>
+                        <On Platform ="Android" Value="32"/>
+                        <On Platform ="Android" Value="400"/>
+                    </OnPlatform>
+                </Label.FontSize>
+                
+                
+                
+                <Label.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS" Value="2"/>
+                    <On Platform ="Android" Value="40"/>
+                    <On Platform ="Android" Value="1"/>
+                    </OnPlatform>
+            </Label.Padding>
+            </Label>
+            <Label Text="Dare" FontSize="Large"/>
+            <Label FontSize="Large">
+                Good Morning
+            </Label>
+            <Label FontSize="Large">
+                <Label.Text>
+                    Hello here
+                </Label.Text>
+
+            </Label>
+            <BoxView BackgroundColor="Green"/>
+                
+
+        </StackLayout>
+    </ContentPage.Content>
+     
+
+</ContentPage>
